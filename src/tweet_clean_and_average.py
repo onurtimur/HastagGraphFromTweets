@@ -140,11 +140,11 @@ def tweet_flow():
     font_size = 10,
     with_labels = True )
 
-    plt.show(block = False)
+    plt.draw()
+    plt.pause(0.001)
 
     time.sleep(60)
     graph.clear()
-    plt.close()
     tweet_flow()
 
 
@@ -158,6 +158,8 @@ tinterval = latest = time.strptime("00:01:00" , "%H:%M:%S")
 latest = time.strptime("00:00:00" , "%H:%M:%S")
 graph = nx.Graph()
 tweet_flow()
+plt.ion()
+plt.show()
 
 
 
