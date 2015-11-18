@@ -31,4 +31,21 @@ Finally cleaned tweets will be written into "ft2.txt" output file with count of 
 
 getEdgesfromPairs function:
 
+all hastags from "generateTags" is passed into this function to create 2 pairs in order to link each node in the graph.
+
+calc_average_degree function:
+
+Degree of all nodes is divided by the node number in this function. And the result is written into "ft2.txt" output file.
+
+tweetFlow function:
+
+All functions are called in every 60 second loop in the order of:
+
+-generateTags
+-getEdgesFromPairs
+-calc_average_node
+
+First the nodes of hashtags is imported from tweets , edges is derived from the nodes ,average node degree is calculated and finally the graph is drawed from the inputs.
+
+
 
