@@ -92,7 +92,7 @@ def genereate_tags():
 
 def get_edges_from_pairs(pairs):
 
-    ikiliListe = []
+    pair_listed = []
 
     for line in pairs:
 
@@ -100,9 +100,9 @@ def get_edges_from_pairs(pairs):
             for i in range( 1 , len(line)):
                 for j in range(1 ,len(line)):
                     if i!=j:
-                        ikiliListe.append(tuple([line[i],line[j]]))
+                        pair_listed.append(tuple([line[i],line[j]]))
 
-    return ikiliListe
+    return pair_listed
 
 def calc_average_degree():
     global graph
