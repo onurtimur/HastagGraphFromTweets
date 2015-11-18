@@ -110,10 +110,10 @@ def calc_average_degree():
 
     node_degree = nx.degree(graph).items()
     len_nodes = len(node_degree)
-    total_degree = 0
+    total_degree = 0.00
     for i in node_degree:
         total_degree += i[1]
-    avr_degree =  total_degree / len_nodes
+    avr_degree =  round ( total_degree / len_nodes , 2)
     with open(file_dir + 'tweet_output/ft2.txt', "w") as text_file:
         text_file.write('\n'+ str(avr_degree))
     text_file.close()
