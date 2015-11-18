@@ -133,9 +133,8 @@ def tweet_flow():
 
 
     nx.draw_spectral(graph,
-    node_size = 300,   # node_size can either take a single value (where all nodes will be size N),
-                             # or a list of values, where Nth list value will be the size for the Nth node
-    width = 100,  # similarly, the Nth value corresponds to the width for edge N
+    node_size = 300,  
+    width = 100,  
     node_color = '#A0CBE2', #light blue
     edge_color = '#4169E1', #royal blue
     font_size = 10,
