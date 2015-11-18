@@ -142,7 +142,7 @@ def tweet_flow():
 
     plt.show(block = False)
 
-    time.sleep(15)
+    time.sleep(60)
     graph.clear()
     plt.close()
     tweet_flow()
