@@ -123,7 +123,7 @@ def tweet_flow():
 
     print "Incoming Tweets!"
     hashtag_edges = []
-    hastag_edges = get_edge_from_pairs(genereate_tags())
+    hastag_edges = get_edges_from_pairs(genereate_tags())
     graph = max(nx.connected_component_subgraphs(graph), key=len)
     for i in hastag_edges:
         if i[0] != i[1] and len(i[0]) > len(i[1]):
