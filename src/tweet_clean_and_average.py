@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 
 
-def cleanTweets(data,listlen):
+def clean_tweets(data,listlen):
     global file_dir
     tweet_collector = ""
     unicode_counter = 0
@@ -39,7 +39,7 @@ def cleanTweets(data,listlen):
         text_file.write(tweet_collector)
     text_file.close()
 
-def genereateTags():
+def genereate_tags():
     global latest
     global tinterval
     global graph
@@ -52,7 +52,7 @@ def genereateTags():
     templist=[]
     pairs = []
 
-    cleanTweets(data,listlen)
+    clean_tweets(data,listlen)
     for i in range(listlen):
 
         try:
@@ -90,7 +90,7 @@ def genereateTags():
 
     return pairs
 
-def getEdgesFromPairs(pairs):
+def get_edges_from_pairs(pairs):
 
     ikiliListe = []
 
@@ -123,7 +123,7 @@ def tweet_flow():
 
     print "Incoming Tweets!"
     hashtag_edges = []
-    hastag_edges = getEdgesFromPairs(genereateTags())
+    hastag_edges = get_edge_from_pairs(genereate_tags())
     graph = max(nx.connected_component_subgraphs(graph), key=len)
     for i in hastag_edges:
         if i[0] != i[1] and len(i[0]) > len(i[1]):
