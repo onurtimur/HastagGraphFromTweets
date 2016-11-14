@@ -1,7 +1,8 @@
-# HastagGraphFromTweets
+# HashtagGraphFromTweets
 Drawing network graph for related hastags from tweets.
 
-This program will run at Python 2.7.x 64-bit distribution. Dependency: These packages below must be imported in order to use the program:
+This program will run at Python 2.7.x 64-bit distribution. 
+Dependency: These packages below must be imported in order to use the program,
 
 •	Networkx
 •	json
@@ -29,10 +30,10 @@ generate_tags function:
 
 This function reads the tweets.txt file which contains the tweets for the last 60 seconds from all over the world.
 After importing the tweets there is a loop that goes to each tweets entitiy property and looks if there is any hastag in it,
-if there is a hasthag thats text is not null ,takes that hashtag. On the second step it looks to hastag whether it contains
-any unicode and if so , it cleans the hastag text. and appends it to temporary list. Also second attribute "created_at" is
+if there is a hashtag thats text is not null ,takes that hashtag. On the second step it looks to hashtag whether it contains
+any unicode and if so , it cleans the hashtag text. and appends it to temporary list. Also second attribute "created_at" is
 also imported from tweets to compare the time intervals between each tweet. So there is a control that looks to each tweet's
-timestamp and if it is older than 1 minute from the lastest tweet, It won't be used to generate the graph. Finally hastags
+timestamp and if it is older than 1 minute from the lastest tweet, It won't be used to generate the graph. Finally hashtags
 will be passed to "get_edges_from_pairs” function.
 
 clean_tweets function:
@@ -44,7 +45,7 @@ tweets will be written into "ft2.txt" output file with count of each unicode twe
 
 get_edges_from_pairs function:
 
-Hastags from "generate_tags" is passed into this function to create 2 pairs in order to link each node in the graph.
+Hashtags from "generate_tags" is passed into this function to create 2 pairs in order to link each node in the graph.
 calc_average_degree function:
 Degree of all nodes is divided by the node number in this function. And the result is written into "ft2.txt" output file.
 
