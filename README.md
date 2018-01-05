@@ -1,5 +1,5 @@
 # HashtagGraphFromTweets
-Drawing network graph for related hastags from tweets.
+Drawing network graph for related hashtags from tweets.
 
 This program will run at Python 2.7.x 64-bit distribution. 
 Dependency: These packages below must be imported in order to use the program,
